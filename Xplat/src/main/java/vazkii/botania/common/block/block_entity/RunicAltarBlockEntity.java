@@ -445,9 +445,13 @@ public class RunicAltarBlockEntity extends SimpleInventoryBlockEntity implements
 			}
 			if (altar.recipeKeepTicks > 0 && altar.canAddLastRecipe()) {
 				String s = I18n.get("botaniamisc.altarRefill0");
-				gui.drawString(mc.font, s, xc - mc.font.width(s) / 2, yc + 10, 0xFFFFFF);
+				if (s != null && !s.isEmpty()) {
+					gui.drawString(mc.font, s, xc - mc.font.width(s) / 2, yc + 10, 0xFFFFFF);
+				}
 				s = I18n.get("botaniamisc.altarRefill1");
-				gui.drawString(mc.font, s, xc - mc.font.width(s) / 2, yc + 20, 0xFFFFFF);
+				if (s != null && !s.isEmpty()) {
+					gui.drawString(mc.font, s, xc - mc.font.width(s) / 2, yc + 20, 0xFFFFFF);
+				}
 			}
 		}
 	}
